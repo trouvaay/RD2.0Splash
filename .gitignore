@@ -1,0 +1,16 @@
+README.md
+*.pyc
+*.pyo
+locale/*.mo
+.DS_Store
+local_settings.py
+*.log
+
+# Virtualenv Files
+/env/
+.env
+
+# Static Files
+/static/
+/media/
+/public/

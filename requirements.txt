@@ -1,0 +1,34 @@
+Django==1.8.3
+gunicorn>=19.3.0
+psycopg2>=2.6.1
+dj-database-url>=0.3.0
+wsgiref>=0.1.2
+
+# theming
+django-bootstrap3>=5.1.1
+
+# helpers
+django-debug-toolbar==1.3.0
+django-extensions>=1.5.5
+
+# static files
+#whitenoise>=1.0.6
+dj-static>=0.0.6
+
+# api
+djangorestframework>=3.1.3
+django-cors-headers>=1.0.0
+django-filter>=0.9
+
+# files/images upload (Amazon S3)
+boto>=2.36.0
+django-storages>=1.1.8
+
+# mailing
+sendgrid>=1.4.0
+
+# social/api connects
+python-social-auth==0.2.10
+#oauth2>=1.5.211
+#python-openid>=2.2.5
+#httplib2>=0.9
