@@ -4,12 +4,18 @@ psycopg2>=2.6.1
 dj-database-url>=0.3.0
 wsgiref>=0.1.2
 
+django-userena==1.4.1
+easy_thumbnails==2.2
+django-notifications-hq==0.7.0 # notifications
+django-localflavor>=1.1 # custom country-specific fields and etc
+
 # theming
 django-bootstrap3>=5.1.1
 
 # helpers
 django-debug-toolbar==1.3.0
-django-extensions>=1.5.5
+django-extensions>=1.5.5  # to visualize models and so on
+
 
 # static files
 #whitenoise>=1.0.6

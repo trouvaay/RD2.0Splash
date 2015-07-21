@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RareDoor</title>
+  <meta name="description" content="RareDoor" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  {% block styles %}
+  <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}landing/css/landing.css" type="text/css" />
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css" type="text/css" />
+  {% endblock %}
+</head>
+
+<body>
+
+
+<body>
+    
+  <!-- header -->
+  <!-- / header -->
+
+  <div>
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- footer -->  
+  <!-- / footer -->  
+
+
+
+{% block scripts %}
+<script src="{{ STATIC_URL }}js/vendor/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/vendor/jquery.cookie.js"></script>
+<script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ STATIC_URL }}js/vendor/ie10-viewport-bug-workaround.js"></script>
+
+<script src="{{ STATIC_URL }}landing/js/vendor/appear/jquery.appear.js"></script>
+{% endblock %}
+
+</body>
+</html>

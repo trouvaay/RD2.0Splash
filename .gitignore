@@ -3,8 +3,9 @@ README.md
 *.pyo
 locale/*.mo
 .DS_Store
-local_settings.py
 *.log
+
+settings/local.py
 
 # Virtualenv Files
 /env/
@@ -14,3 +15,6 @@ local_settings.py
 /static/
 /media/
 /public/
+
+# Node
+node_modules
