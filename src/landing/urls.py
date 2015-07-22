@@ -10,9 +10,3 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='landing/index.html'), name='index'),
 
 )
-
-
-if not settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    )
