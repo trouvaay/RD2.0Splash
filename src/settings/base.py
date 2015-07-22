@@ -204,9 +204,9 @@ SHELF_LIFE = 0
 
 
 try:
-    if os.getenv('PLATFORM') == 'Heroku-Dev':
+    if os.getenv('PLATFORM') == 'heroku-dev':
         from .heroku_dev import *
-    elif os.getenv('PLATFORM') == 'Heroku-Prod':
+    elif os.getenv('PLATFORM') == 'heroku-prod':
         from .heroku_prod import *
     else:
         from .local import *
