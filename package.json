@@ -31,6 +31,6 @@
     "watchify": "latest"
   },
   "scripts": {
-    "postinstall": "bower install && gulp install",
+    "postinstall": "bower install && gulp install"
   }
 }

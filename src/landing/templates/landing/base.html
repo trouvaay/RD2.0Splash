@@ -10,11 +10,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   {% block styles %}
-  <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- build:css css/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="{{ STATIC_URL }}bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}bower_components/components-font-awesome/css/font-awesome.min.css">
+  <!-- endinject -->
+  <!-- endbuild -->
 
-  <link rel="stylesheet" href="{{ STATIC_URL }}landing/css/landing.css" type="text/css" />
-
+  <!-- build:css css/app.css -->
   <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css" type="text/css" />
+  <!-- endbuild -->
   {% endblock %}
 </head>
 
@@ -33,17 +38,21 @@
   <!-- footer -->  
   <!-- / footer -->  
 
-
+</body>
 
 {% block scripts %}
-<script src="{{ STATIC_URL }}js/vendor/jquery.min.js"></script>
-<script src="{{ STATIC_URL }}js/vendor/jquery.cookie.js"></script>
-<script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{{ STATIC_URL }}js/vendor/ie10-viewport-bug-workaround.js"></script>
+<!-- build:js js/vendor.js -->
+<!-- bower:js -->
+<script src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.min.js"></script>
+<!-- script src="{{ STATIC_URL }}bower_components/angular/angular.min.js"></script -->
+<!-- script src="{{ STATIC_URL }}bower_components/angular-sanitize/angular-sanitize.js"></script -->
+<!-- script src="{{ STATIC_URL }}bower_components/angular-animate/angular-animate.js"></script -->
+<!-- endinject -->
+<!-- endbuild -->
 
-<script src="{{ STATIC_URL }}landing/js/vendor/appear/jquery.appear.js"></script>
+<!-- build:js js/vendor-plus.js -->
+<!-- script src="vendor/datepicker/bootstrap-datepicker.js"></script -->
+<!-- endbuild -->
 {% endblock %}
 
-</body>
 </html>

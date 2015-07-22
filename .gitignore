@@ -16,5 +16,6 @@ settings/local.py
 /media/
 /public/
 
-# Node
+# Packags
 node_modules
+bower_components
