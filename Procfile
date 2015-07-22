@@ -1,2 +1,2 @@
-web: gunicorn .src/raredoor.wsgi --log-file -
+web: sh -c 'cd src && gunicorn raredoor.wsgi --log-file -'
 #worker: celery worker --app=raredoor --loglevel=info
