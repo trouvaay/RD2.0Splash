@@ -101,7 +101,7 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = '../static-collected'
+STATIC_ROOT = 'static-collected'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
