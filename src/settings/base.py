@@ -99,9 +99,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
-
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = '../static-collected'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
