@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css');
 
-var browserSync = require('browser-sync');
 var mainBowerFiles = require('main-bower-files');
 
 
