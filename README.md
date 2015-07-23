@@ -9,6 +9,9 @@ pip install -r requirements.txt
 
 2. create local setings:  
 copy and edit src/settings/local_example.py  
+```sh
+cp src/settings/local_example.py src/settings/local.py
+```
 
 3. to create db:  
 (sqllite db is already the repo)  
