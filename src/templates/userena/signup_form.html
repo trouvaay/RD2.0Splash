@@ -1,0 +1,44 @@
+{% extends "base_simple.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+<div class="container w-xxl w-auto-xs">
+  <div class="wrapper text-center">
+    <strong>Sign up to get in</strong>
+  </div>
+
+  <table class="m-b" style="width: 100%">
+    <tr>
+      <td><a href="{% url 'social:begin' 'linkedin-oauth2' %}" class="btn btn-block btn-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a></td>
+      <td style="padding: 0 10px 0 10px"><a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-facebook"><i class="fa fa-facebook"></i> Facebook</a></td>
+      <td><a href="{% url 'social:begin' 'twitter' %}" class="btn btn-block btn-twitter"><i class="fa fa-twitter"></i> Twitter</a></td>
+    </tr>
+  </table>
+
+  <form name="form" method="post" class="form-validation">
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+    {% csrf_token %}
+    
+    {% bootstrap_form_errors form %}
+
+    <div class="list-group">
+      <div class="list-group-item">
+        <input name="{{ form.email.html_name }}" type="text" placeholder="{{ form.email.label }}" class="form-control no-border" required>
+      </div>
+      <div class="list-group-item">
+        <input name="{{ form.password1.html_name }}" type="password" placeholder="{{ form.password1.label }}" class="form-control no-border" required>
+      </div>
+      <div class="list-group-item">
+        <input name="{{ form.password2.html_name }}" type="password" placeholder="{{ form.password2.label }}" class="form-control no-border" required>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">{% trans 'Sign Up' %}</button>
+    <div class="line line-dashed"></div>
+    <p class="text-muted text-center"><small>{% trans 'Already have an account?' %}</small></p>
+    <a href="{% url 'userena_signin' %}" class="btn btn-lg btn-default btn-block">{% trans 'Sign in' %}</a>
+  </form>
+</div>
+{% endblock %}

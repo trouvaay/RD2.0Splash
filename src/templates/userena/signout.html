@@ -1,0 +1,15 @@
+{% extends "base_simple.html" %} 
+{% load i18n %}
+
+
+{% block content %}
+  <p class="alert alert-success">
+    {% trans "Sign out complete. Thanks." %}
+  </p>
+
+  <script>
+    $(document).ready( function() {
+        setTimeout(function() {window.location.href = "/";}, 1000);
+    });
+  </script>
+{% endblock %}

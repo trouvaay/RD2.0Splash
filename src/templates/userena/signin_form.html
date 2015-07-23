@@ -1,0 +1,43 @@
+{% extends "base_simple.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+<div class="container w-xxl w-auto-xs">
+  <div class="wrapper text-center">
+    <strong>Sign in to get in</strong>
+  </div>
+  <form name="form" method="post" class="form-validation">
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" />{% endif %}
+    {% csrf_token %}
+    
+    {% bootstrap_form_errors form %}
+
+    <div class="list-group">
+      <div class="list-group-item">
+        <input name="{{ form.identification.html_name }}" type="text" placeholder="{{ form.identification.label }}" class="form-control no-border" required>
+      </div>
+      <div class="list-group-item">
+        <input name="{{ form.password.html_name }}" type="password" placeholder="{{ form.password.label }}" class="form-control no-border" required>
+      </div>
+    </div>
+
+    <div class="checkbox m-b">
+        <label>
+            <input name="{{ form.remember_me.html_name }}" type="checkbox"/>
+            {{ form.remember_me.label }}
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">{% trans 'Sign In' %}</button>
+    <div class="text-center m-t m-b"><a href="{% url 'userena_password_reset' %}"><small>{% trans 'Forgot password?' %}</small></a></div>
+    <!--
+    <div class="line line-dashed"></div>
+    <p class="text-muted text-center"><small>{% trans 'Do not have an account?' %}</small></p>
+    <a href="{% url 'userena_signup' %}" class="btn btn-lg btn-default btn-block">{% trans 'Create an account' %}</a>
+    -->
+  </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RareDoor</title>
+  <meta name="description" content="RareDoor" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  {% block styles %}
+  <!-- build:css css/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="{{ STATIC_URL }}bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- link rel="stylesheet" href="{{ STATIC_URL }}bower_components/components-font-awesome/css/font-awesome.min.css" -->
+  <link rel="stylesheet" href="{{ STATIC_URL }}bower_components/simple-line-icons/css/simple-line-icons.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:css css/app.css -->
+  <link rel="stylesheet" href="{{ STATIC_URL }}theme/css/app.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}theme/css/font.css">
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/app.css" type="text/css" />
+  <!-- endbuild -->
+  {% endblock %}
+</head>
+
+<body style="padding-top: 30px; padding-bottom: 30px; background-color: #f0f3f4;">
+
+  <a href="/" class="navbar-brand block m-t">RareDoor</a>
+  <div>
+    {% block content %}{% endblock %}
+  </div>
+
+  <div class="m-t-lg text-center">
+    <p>
+      <small class="text-muted">RareDoor<br>&copy; 2015</small>
+    </p>
+  </div>
+
+
+{% block scripts %}
+<!-- build:js js/vendor.js -->
+<!-- bower:js -->
+<script src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endinject -->
+<!-- endbuild -->
+{% endblock %}
+
+</body>
+</html>

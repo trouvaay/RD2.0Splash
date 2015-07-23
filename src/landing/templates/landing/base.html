@@ -90,10 +90,17 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-              <i class="icon-magnifier"></i>
-              <span class="visible-xs-inline">Search</span>
+              <i class="icon-magnifier"></i> <span class="visible-xs-inline">Search</span>
             </a>
           </li>
+          {% if not request.user.is_authenticated %}
+          <li>
+            <a href="{% url 'userena_signin' %}">
+              <i class="icon-login"></i> <span class="visible-xs-inline">Signin</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if request.user.is_authenticated %}
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
               <i class="icon-bell fa-fw"></i>
@@ -147,27 +154,28 @@
                 </div>
               </li>
               <li>
-                <a href>
+                <a href="">
                   <span class="badge bg-danger pull-right">30%</span>
                   <span>Settings</span>
                 </a>
               </li>
               <li>
-                <a ui-sref="app.page.profile">Profile</a>
+                <a href="">Profile</a>
               </li>
               <li>
-                <a ui-sref="app.docs">
+                <a href="">
                   <span class="label bg-info pull-right">new</span>
                   Help
                 </a>
               </li>
               <li class="divider"></li>
               <li>
-                <a ui-sref="access.signin">Logout</a>
+                <a href="{% url 'userena_signout' %}">Logout</a>
               </li>
             </ul>
             <!-- / dropdown -->
           </li>
+          {% endif %}
         </ul>
         <!-- / navbar right -->
       </div>

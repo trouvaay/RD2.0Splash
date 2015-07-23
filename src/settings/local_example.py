@@ -11,7 +11,7 @@ TEMPLATE_DEBUG = DEBUG
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_lj*!uvx((%8em=tmjj%612)6ln5#e$#z&#l-(am!k+)dzzlt1'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
