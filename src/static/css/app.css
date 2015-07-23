@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .app-aside,
+  .navbar-header {
+    width: 0px;
+  }
+  .navbar-collapse,
+  .app-content,
+  .app-footer {
+    margin-left: 0px;
+  }
+}
+
+
+.background-fullsize {
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+}

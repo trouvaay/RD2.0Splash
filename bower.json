@@ -28,7 +28,8 @@
     "angular-sanitize": "~1.4.1",
     "angular-animate": "1.4.x",
     "bootstrap": "~3.3.5",
-    "components-font-awesome": "~4.3.0"
+    "components-font-awesome": "~4.3.0",
+    "simple-line-icons": "~1.0.0"
   },
   "overrides": {
     "jquery": {
