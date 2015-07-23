@@ -19,7 +19,7 @@ cp src/settings/local_example.py src/settings/local.py
 ```
 
 D. to create db:  
-(sqllite db is already the repo)  
+(sqllite db is already in the repo)  
 ```sh
 bash init.sh
 ```
