@@ -2,6 +2,7 @@ import uuid
 
 from django.db import models
 from django.conf import settings
+from django.utils import timezone
 
 from localflavor.us.models import PhoneNumberField
 

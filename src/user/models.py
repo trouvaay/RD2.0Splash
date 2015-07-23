@@ -4,7 +4,7 @@ from django.conf import settings
 from userena.models import UserenaBaseProfile
 
 
-class User(UserenaBaseProfile): # class Profile(models.Model):
+class Profile(UserenaBaseProfile): # class Profile(models.Model):
     """
     This is the place where we add any fields when we need a new user property
     """

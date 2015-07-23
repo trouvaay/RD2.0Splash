@@ -3,10 +3,12 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.conf import settings
 
-#import views
+import views
 
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='landing/index.html'), name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
 
+    url(r'^accounts/$', TemplateView.as_view(template_name='403.html')),
+    url(r'^accounts/', include('userena.urls')),
 )

@@ -32,7 +32,7 @@ INSTALLED_APPS = (
     'localflavor',
     'social.apps.django_app.default',
     'userena',
-    #'guardian', # for userena
+    'guardian', # for userena
 
     'raredoor',
     'landing',
@@ -52,6 +52,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+
+    'landing.middleware.RefererMiddleware', # TODO: temp. to collect referers for subscribers
 )
 
 ROOT_URLCONF = 'raredoor.urls'
@@ -161,7 +163,7 @@ AWS_QUERYSTRING_AUTH = False # don't add complex authentication-related query pa
 
 # USERENA
 ANONYMOUS_USER_ID = -1
-AUTH_PROFILE_MODULE = 'user.User' # almost depricated
+AUTH_PROFILE_MODULE = 'user.Profile' # almost depricated
 USERENA_ACTIVATION_DAYS = 7 # One-week activation window;
 USERENA_FORBIDDEN_USERNAMES = (
     'login', 'logout', 'register', 'signup', 'signout',
