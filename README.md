@@ -2,18 +2,23 @@
 
 ### Installation (locally)
 
-1. install packages:  
+A. create environment:  
+```sh
+virtualenv env --system-site-packages
+```
+
+B. install packages:  
 ```sh
 pip install -r requirements.txt
 ```
 
-2. create local setings:  
+C. create local setings:  
 copy and edit src/settings/local_example.py  
 ```sh
 cp src/settings/local_example.py src/settings/local.py
 ```
 
-3. to create db:  
+D. to create db:  
 (sqllite db is already the repo)  
 ```sh
 bash init.sh
