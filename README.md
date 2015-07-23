@@ -12,8 +12,8 @@ B. install packages:
 pip install -r requirements.txt
 ```
 
-C. create local setings:  
-copy and edit src/settings/local_example.py  
+C. create local settings:  
+(copy and edit src/settings/local_example.py)  
 ```sh
 cp src/settings/local_example.py src/settings/local.py
 ```
