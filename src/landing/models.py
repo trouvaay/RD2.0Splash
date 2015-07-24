@@ -30,9 +30,9 @@ class SubscriptionMerchant(Subscription):
       (CATEGORY_FUN, 'Fun Stuff'),
     )
 
-    title = models.CharField(max_length=8)
+    title = models.CharField(max_length=8, blank=True, null=True)
     first_name = models.CharField(max_length=32)
-    last_name = models.CharField(max_length=32)
+    last_name = models.CharField(max_length=32, blank=True, null=True)
 
     phone = models.CharField(max_length=32)
     store = models.CharField(max_length=64)

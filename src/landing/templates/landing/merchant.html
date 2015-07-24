@@ -9,13 +9,15 @@
 <div class="bg-light padder-v">
   <div class="container-fluid text-center m-lg">
     <h3 class="text-info m-t-sm">Join the initial local shopping beta</h3>
-    <div class="m-b-sm"></div>
+    <div class="m-b-sm">Why join?</div>
   </div>
 </div>
 
+<!--
 <div class="container-fluid text-center m">
   <h4 class="m-t-sm">Why join?</h4>
 </div>
+-->
 
 <div>
   <table width="100%" cellpadding="0" cellspacing="0" style="color: white">
@@ -39,29 +41,8 @@
   </table>
 </div>
 <div class="splash" style="position: relative">
-  <table width="100%" cellpadding="0" cellspacing="0" style="color: white">
-    <tr>
-      <td rowspan="2" width="50%" height="600" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}landing/img/2.jpg');">
-        <h3 class="text-uppercase">Hayes Valley</h3>
-        <div>Extra text for the title</div>
-      </td>
-      <td colspan="2" width="50%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/1.jpg')">
-        <h3 class="text-uppercase">Local</h3>
-        <div>Extra text for the title</div>
-      </td>
-    </tr>
-
-    <tr>
-      <td width="25%" height="300" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}landing/img/3.jpg');">
-        <h3 class="text-uppercase">Hayes Valley</h3>
-        <div>Extra text for the title</div>
-      </td>
-      <td width="25%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/4.jpg')">
-        <h3 class="text-uppercase">Local</h3>
-        <div>Extra text for the title</div>
-      </td>
-    </tr>
-  </table>
+  <div class="text-center background-fullsize" style="height: 600px; background-image: url('{{ STATIC_URL }}landing/img/1.jpg');">
+  </div>
 
   {% if not subscription_merchant %}
   <div class="container" style="position: absolute; top: 30px; width: 100%">
@@ -71,13 +52,11 @@
       </div-->
 
       <div class="panel-body">
-        <h4>Find great products near you.</h4>
-        <h4>Shop local.</h4>
+        <h4>Type something here.</h4>
         <br>
 
         <form id="subscription" action="" method="post">
             {% csrf_token %}
-            <p>Get notified when we finish tinkering</p>
             <div class="row">
               <div class="col-xs-6">
                 {% bootstrap_field form.title %}
@@ -128,6 +107,11 @@
             {% endbuttons %}
             <style type="text/css"> #subscription label { display: none } </style>
         </form>
+
+        <br>
+        <p>
+          <a href="mailto:help@raredoor.com">Questions?</a>
+        </p>
       </div>
     </div>
   </div>
