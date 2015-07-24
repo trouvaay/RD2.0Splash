@@ -40,6 +40,7 @@ class SubscriptionMerchant(Subscription):
     street2 = models.CharField(max_length=64, verbose_name='Address 2', blank=True, null=True)
     zipcd = models.CharField(max_length=8, verbose_name='Zip')
     category = models.PositiveIntegerField(choices=CATEGORIES, blank=True, null=True, db_index=True)
+    pos = models.CharField(max_length=64, blank=True, null=True, verbose_name='POS/Inventory System(s)')
 
     class Meta:
         verbose_name = 'Mechant subscription'

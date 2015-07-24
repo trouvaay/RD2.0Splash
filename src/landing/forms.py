@@ -13,7 +13,10 @@ class SubscriptionMerchantForm(forms.ModelForm):
 
     class Meta:
         model = SubscriptionMerchant
-        fields = ['title', 'first_name', 'last_name', 'email', 'phone', 'store', 'street', 'street2', 'zipcd', 'category']
+        fields = [
+            'title', 'first_name', 'last_name', 'email', 'phone', 'store', 
+            'street', 'street2', 'zipcd', 'category', 'pos'
+        ]
 
     def __init__(self, *args, **kwargs):
         super(SubscriptionMerchantForm, self).__init__(*args, **kwargs)
