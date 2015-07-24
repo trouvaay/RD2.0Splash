@@ -37,7 +37,7 @@
   <!-- header -->
   <header id="header" class="navbar" role="menu">
       <!-- navbar header -->
-      <div class="navbar-header" ssstyle="position: absolute; top: 0; left: 0px">
+      <div class="navbar-header" style="position: absolute; top: 15px; left: 15px;">
         <button class="pull-right visible-xs dk" target=".navbar-collapse">
           <i class="glyphicon glyphicon-cog"></i>
         </button>
@@ -45,16 +45,15 @@
           <i class="glyphicon glyphicon-align-justify"></i>
         </button>
         <!-- brand -->
-        <a href="#/" class="navbar-brand text-lt">
-          <img src="img/logo.png" alt="." class="hide">
-          <span class="m-l-xs">RareDoor</span>
+        <a href="{% url 'landing:index' %}">
+          <img src="{{ STATIC_URL }}img/logo.png" alt="RareDoor" height="16">
         </a>
         <!-- / brand -->
       </div>
       <!-- / navbar header -->
 
       <!-- navbar collapse -->
-      <div class="collapse pos-rlt navbar-collapse bg-white-only">
+      <div class="collapse navbar-collapse">
         <!-- link and dropdown -->
         <ul class="nav navbar-nav hidden-xs">
           <li>
@@ -198,10 +197,10 @@
   <!-- footer -->  
   <div class="container-fluid m-t-xl m-b-xl">
     <div class="row">
-      <div class="col-xs-4">
-        RareDoor
+      <div class="col-sm-6" style="padding-top: 5px">
+        <a href="{% url 'landing:index' %}"><img src="{{ STATIC_URL }}img/logo.png" alt="RareDoor" style="vertical-align: baseline"></a> <span class="text-muted">&nbsp; &copy; 2015 Trouvaay Inc.</span>
       </div>
-      <div class="col-xs-8 text-right">
+      <div class="col-sm-6 text-right">
         <a href="https://www.facebook.com" title="Facebook" class="btn btn-icon btn-rounded btn-default m-l m-r"><i class="fa fa-facebook"></i></a>
         <a href="https://www.twitter.com" title="Twitter" class="btn btn-icon btn-rounded btn-default"><i class="fa fa-twitter"></i></a>
         <a href="https://www.instagram.com" title="Instagram" class="btn btn-icon btn-rounded btn-default m-l m-r"><i class="fa fa-instagram"></i></a>

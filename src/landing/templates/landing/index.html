@@ -17,22 +17,22 @@
 <div class="splash" style="position: relative">
   <table width="100%" cellpadding="0" cellspacing="0" style="color: white">
     <tr>
-      <td rowspan="2" width="50%" height="600" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}img/landing/2.jpg');">
+      <td rowspan="2" width="50%" height="600" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}landing/img/2.jpg');">
         <h3 class="text-oswald text-uppercase">Hayes Valley</h3>
         <div>Extra text for the title</div>
       </td>
-      <td colspan="2" width="50%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}img/landing/1.jpg')">
+      <td colspan="2" width="50%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/1.jpg')">
         <h3 class="text-oswald text-uppercase">Local</h3>
         <div>Extra text for the title</div>
       </td>
     </tr>
 
     <tr>
-      <td width="25%" height="300" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}img/landing/3.jpg');">
+      <td width="25%" height="300" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}landing/img/3.jpg');">
         <h3 class="text-oswald text-uppercase">Hayes Valley</h3>
         <div>Extra text for the title</div>
       </td>
-      <td width="25%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}img/landing/4.jpg')">
+      <td width="25%" height="300" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/4.jpg')">
         <h3 class="text-oswald text-uppercase">Local</h3>
         <div>Extra text for the title</div>
       </td>
@@ -66,5 +66,24 @@
   {% endif %}
 </div>
 
-
+<div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="color: white">
+    <tr>
+      <td width="33%" height="150" class="text-center background-fullsize" style="background-image: url('{{ STATIC_URL }}landing/img/2.jpg');">
+        <h4 class="text-oswald text-uppercase">Discover Local<h4>
+        <h4 class="text-oswald text-uppercase">products &amp; boutiques</h4>
+        <div></div>
+      </td>
+      <td width="33%" height="150" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/1.jpg')">
+        <h4 class="text-oswald text-uppercase">Purchase or<h4>
+        <h4 class="text-oswald text-uppercase">go see in store</h4>
+        <div></div>
+      </td>
+      <td width="33%" height="150" class="text-center background-fullsize" style="background: url('{{ STATIC_URL }}landing/img/1.jpg')">
+        <h4 class="text-oswald text-uppercase">Same day delivery<h4>
+        <div></div>
+      </td>
+    </tr>
+  </table>
+</div>
 {% endblock %}

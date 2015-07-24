@@ -1,8 +1,4 @@
 @media (min-width: 768px) {
-  .app-aside,
-  .navbar-header {
-    width: 0px;
-  }
   .navbar-collapse,
   .app-content,
   .app-footer {
